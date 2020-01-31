@@ -1,20 +1,24 @@
-var path = require('path');
+
+const path = require('path');
 
 module.exports = {
-    mode: 'production',
-    entry: './src/index.js',
-    output: {
-        path: path.resolve('lib'),
-        filename: 'index.js',
-        libraryTarget: 'commonjs2'
-    },
-    module: {
-        rules: [
-            {
-                test: /\.jsx?$/,
-                exclude: /(node_modules)/,
-                use: 'babel-loader'
-            }
-        ]
-    }
+	entry: './src/index.js',
+	externals: {
+		react: 'commonjs react'
+	},
+	mode: 'production',
+	module: {
+		rules: [
+			{
+				exclude: /(node_modules)/,
+				test: /\.jsx?$/,
+				use: 'babel-loader'
+			}
+		]
+	},
+	output: {
+		filename: 'index.js',
+		libraryTarget: 'commonjs2',
+		path: path.resolve('build')
+	}
 }

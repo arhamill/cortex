@@ -1,28 +1,24 @@
 {
   "name": "@arhamill/cortex",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "Reactive library for corda",
-  "main": "./lib/index.js",
+  "main": "./build/index.js",
   "dependencies": {
     "axios": "^0.19.2",
-    "babel-core": "^6.21.0",
-    "babel-loader": "^7.1.4",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.16.0",
-    "babel-preset-stage-0": "^6.24.1",
-    "debug": "^3.1.0",
-    "follow-redirects": "^1.5.10",
-    "js-tokens": "^4.0.0",
-    "loose-envify": "^1.4.0",
-    "ms": "^2.0.0",
-    "object-assign": "^4.1.1",
-    "path": "^0.12.7",
-    "prop-types": "^15.7.2",
+    "sse.js": "^0.4.4"
+  },
+  "peerDependencies": {
+    "react": "^16.12.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
     "react": "^16.12.0",
-    "react-is": "^16.12.0",
-    "sse.js": "^0.4.4",
-    "webpack": "^4.41.5",
-    "webpack-cli": "^3.3.10"
+    "webpack-cli": "^3.2.1",
+    "webpack": "^4.29.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
