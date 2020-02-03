@@ -1,5 +1,6 @@
 import React from 'react'
 import createTokensProvider from './tokensProvider'
+import createLinearProvider from './linearProvider'
 import createStateProvider from './stateProvider'
 
 export const createTokensContext = (url) => {
@@ -8,6 +9,15 @@ export const createTokensContext = (url) => {
     return {
         tokensContext: context,
         TokensProvider: createTokensProvider(url, context)
+    }
+}
+
+export const createLinearContext = (url, stateClass) => {
+    const context = React.createContext()
+
+    return {
+        linearContext: context,
+        LinearProvider: createLinearProvider(url, stateClass, context)
     }
 }
 

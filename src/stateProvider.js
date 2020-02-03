@@ -45,7 +45,7 @@ const handleStateEvent = (event, states, setStates) => {
     const { consumed, produced } = JSON.parse(event.data)
 
     Object.keys(consumed).forEach(key => {
-        if(produced[key] === undefined) delete copy[key]
+        delete copy[key]
     })
     Object.keys(produced).forEach(key => {
         copy[key] = produced[key]
