@@ -8,7 +8,7 @@
 npm install @arhamill/cortex
 ```
 
-2. Run the [cortex webserver](https://github.com/arhamill/cortex)
+2. Run the [cortex webserver](https://github.com/arhamill/cortex-server)
 
 3. Create a corda context and provider component
 ```
