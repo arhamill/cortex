@@ -42,3 +42,20 @@ const MyComponent = () => {
 ```
 
 Any component consuming this context will be re-rendered when there is a vault update.
+
+## Full API documentation
+
+Create a context provider for token-sdk fungible tokens:
+```
+createTokensContext(url)
+```
+
+Create a context provider for any linear state (order of linear ids is preserved):
+```
+createLinearContext(url, stateClass)
+```
+
+Create a context provider for any contract state:
+```
+createStateContext(url, stateClass)
+```
